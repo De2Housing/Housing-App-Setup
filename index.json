@@ -1,0 +1,100 @@
+{
+    "run": [
+        {
+        "method": "shell.start"
+        },
+        {
+            "method": "log",
+            "params": {
+                "text": ["Cloning Housing Repo"]
+            }
+        },
+        {
+            "method": "shell.run",
+            "params": {
+                "message": "git clone https://{{self.github.username}}:{{self.github.password}}@github.com/elarahq/housing-app.git"
+            }
+        },
+        {
+            "method": "log",
+            "params": {
+                "text": ["Cloned Housing Repo"]
+            }
+        },
+        {
+            "method": "log",
+            "params": {
+                "text": ["Switching to Staging Branch"]
+            }
+        },
+        {
+            "method": "shell.run",
+            "params": {
+                "message": "git checkout staging",
+                "path": "housing-app"
+            }
+        },
+        {
+            "method": "log",
+            "params": {
+                "text": ["Switched to Staging Branch", "Updating Staging Branch"],
+                "join": "/n"
+            }
+        },
+        {
+            "method": "shell.run",
+            "params": {
+                "message": "git pull",
+                "path": "housing-app"
+            }
+        },
+        {
+            "method": "log",
+            "params": {
+                "text": ["Updated Staging Branch", "Installing dependencies"],
+                "join": "/n"
+            }
+        }, 
+        {
+            "method": "fs.write",
+            "params": {
+                "path": "housing-app/.npmrc",
+                "text": "//registry.npmjs.org/:_authToken={{self.HousingAppConfig.npmrcAuthToken}}"
+            }
+        },
+        {
+            "method": "shell.run",
+            "params": {
+                "message": "npm i",
+                "path": "housing-app"
+            }
+        },
+        {
+            "method": "log",
+            "params": {
+                "text": ["Installed dependencies"],
+                "join": "/n"
+            }
+        },
+        {
+            "method": "log",
+            "params": {
+                "text": ["Creating Bundles"],
+                "join": "/n"
+            }
+        },
+        {
+            "method": "shell.run",
+            "params": {
+                "message": "npm run create:androidBundles --dev=true",
+                "path": "housing-app"
+            }
+        },
+        {
+            "method": "log",
+            "params": {
+                "text": ["Created Bundles"]
+            }
+        }
+    ]
+}
