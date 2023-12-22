@@ -1,4 +1,4 @@
-# Housing-App-Setup
+#  Housing-App-Setup
 
 We believe in improving the Developer's Experience to foster the development of beautiful apps and softwares. 
 
@@ -15,4 +15,10 @@ To make the Housing App Setup experience, a happier one for new developers we ha
 
 Downloading Pinokio for your machine from - [Pinokio Downloads](https://docs.pinokio.computer/download/)
 
-If you liked this project pls do star this repo. 
+If you liked this project pls do st/Users/parjanyaaditya/Housing-V2/housing-app/packages/Edge/assets/img/housingLogo.webpar this repo. 
+
+Follow the below steps for [Pinokio](https://pinokio.computer/) Installation 
+
+1. [Downloading Pinokio](https://drive.google.com/file/d/1lfLWYzfPq0A7OA2iitZYU-AA3LFY_u_q/view?usp=share_link)
+2. [Downloading Pinokio Dependencies](https://drive.google.com/file/d/1U3z0QsDhE5eZIMPK0HfH1QdcpRKoj5i0/view?usp=share_link)
+
